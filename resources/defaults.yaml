@@ -1,0 +1,21 @@
+## Default configuration and parameter values
+# Note: values for Li-ion storage performance taken from Energy Park VoI project
+
+data_dir: data
+
+variables:
+  solar_year: 2012
+  load_year: 2012
+  mean_load: 100 # kW
+  battery_efficiency: 0.95
+  battery_cost: 70 # £/kWh/yr
+  # for Tesla Powerwall, https://www.cnet.com/home/energy-and-utilities/the-real-cost-of-a-tesla-powerwall/
+
+static:
+  discharge_ratio: 2 # kWp/kWh
+  depth_of_discharge: 0.9
+  initial_SoC: 0.5
+  solar_cost: 80 # £/kWp/yr
+  # from https://atb.nrel.gov/electricity/2023/commercial_pv
+  grid_cap: 500 # kWp
+  sell_price: 0.33 # fraction of buy price

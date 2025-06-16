@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IDE configurations
+.idea
+.vscode
+
+# Mac OS files
+*.DS_STORE
+
+# Temporary files
+temp*
+
+## Ignore complied files from Stan (files without extension)
+models/*
+!models/*.*
