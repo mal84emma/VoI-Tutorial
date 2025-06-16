@@ -1,4 +1,4 @@
-"""Functions modelling and simulating building energy system."""
+"""Model simulating building energy system."""
 
 import os
 import yaml

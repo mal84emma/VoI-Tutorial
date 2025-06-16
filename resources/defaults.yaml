@@ -9,13 +9,13 @@ variables:
   mean_load: 100 # kW
   battery_efficiency: 0.95
   battery_cost: 70 # £/kWh/yr
-  # for Tesla Powerwall, https://www.cnet.com/home/energy-and-utilities/the-real-cost-of-a-tesla-powerwall/
+  # for Tesla Powerwall, https://web.archive.org/web/20240511112531/https://www.forbes.com/home-improvement/solar/tesla-powerwall-solar-battery-review/
 
 static:
   discharge_ratio: 2 # kWp/kWh
   depth_of_discharge: 0.9
   initial_SoC: 0.5
-  solar_cost: 80 # £/kWp/yr
-  # from https://atb.nrel.gov/electricity/2023/commercial_pv
+  solar_cost: 75 # £/kWp/yr
+  # from https://atb.nrel.gov/electricity/2024/commercial_pv
   grid_cap: 500 # kWp
   sell_price: 0.33 # fraction of buy price
