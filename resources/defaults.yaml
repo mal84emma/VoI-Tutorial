@@ -4,8 +4,8 @@
 data_dir: data
 
 variables:
-  solar_year: 2012
-  load_year: 2012
+  solar_year: 2017
+  load_year: 2017
   mean_load: 100 # kW
   battery_efficiency: 0.95
   battery_cost: 70 # £/kWh/yr
@@ -18,4 +18,4 @@ static:
   solar_cost: 75 # £/kWp/yr
   # from https://atb.nrel.gov/electricity/2024/commercial_pv
   grid_cap: 500 # kWp
-  sell_price: 0.33 # fraction of buy price
+  sell_price: 0.5 # fraction of buy price
