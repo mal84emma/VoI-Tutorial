@@ -15,7 +15,7 @@ def sample_posterior(
         nsamples: int,
         mean: float = 100,
         std_dev: float = 10,
-        reduction_factor: float = 0.2,
+        msr_error: float = 0.05,
         thin_factor: int = 100,
     ):
     """Sample from posterior model defined in `posterior.stan`.
@@ -25,9 +25,8 @@ def sample_posterior(
         nsamples (int): Number of samples to draw from the posterior.
         mean (float, optional): Mean of prior dist. Defaults to 100.
         std_dev (float, optional): Std dev of prior dist. Defaults to 10.
-        reduction_factor (float, optional): Std dev of likelihood model as
-            fraction of prior std dev. I.e. fraction by which uncertainty is
-            reduced from prior to likelihood. Defaults to 0.2.
+        msr_error (float, optional): Std dev of likelihood model (measurement
+            error) as fraction of true value (theta). Defaults to 0.05
         thin_factor (int, optional): Factor to thin samples from MCMC chain
             by to reduce correlation. Defaults to 100.
 
@@ -40,7 +39,7 @@ def sample_posterior(
     data = {
         'mu':mean,
         'sigma':std_dev,
-        'reduction_factor':reduction_factor,
+        'error':msr_error,
         'z':z
     }
     inits = {'theta':mean}
