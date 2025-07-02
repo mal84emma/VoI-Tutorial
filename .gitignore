@@ -19,6 +19,9 @@ venv/
 # Temporary files
 temp*
 
+# Outputs
+plots/
+
 ## Ignore complied files from Stan (files without extension)
 models/*
 !models/*.*
