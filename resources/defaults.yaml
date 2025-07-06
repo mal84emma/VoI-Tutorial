@@ -7,11 +7,16 @@ variables:
   solar_year: 2017
   load_year: 2017
   mean_load: 100 # kW
+  mean_load_std: 10
   battery_efficiency: 0.95
+  battery_efficiency_std: 0.025
   battery_cost: 70 # £/kWh/yr
   # for Tesla Powerwall, https://web.archive.org/web/20240511112531/https://www.forbes.com/home-improvement/solar/tesla-powerwall-solar-battery-review/
+  battery_cost_std: 5
 
 static:
+  solar_years: [2012,2013,2014,2015,2016,2017]
+  load_years: [2012,2013,2014,2015,2016,2017]
   discharge_ratio: 2 # kWp/kWh
   depth_of_discharge: 0.9
   initial_SoC: 0.5
