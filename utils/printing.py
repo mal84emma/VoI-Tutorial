@@ -1,3 +1,4 @@
+import numpy as np
 from tabulate import tabulate
 
 def fmt_design_results(results):
@@ -13,5 +14,20 @@ def fmt_design_results(results):
             ],
             headers=['Parameter', 'Unit', 'Value']
         )
+
+    return out
+
+def fmt_voi_results(prior_results, posterior_results):
+    """Display VoI results."""
+
+    prior_cost = prior_results['total']
+    preposterior_cost = np.mean([r['total'] for r in posterior_results])
+
+    out = f"""
+    Prior cost: £{prior_cost/1e3:.2f}/yr
+    Posterior cost: £{preposterior_cost/1e3:.2f}/yr
+    VoI: £{(prior_cost - preposterior_cost)/1e3:.2f}/yr
+    VoI percent: {(prior_cost - preposterior_cost) / prior_cost * 100:.2f}%
+    """
 
     return out
